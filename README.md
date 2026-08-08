@@ -1,0 +1,32 @@
+# ctxpack: LLM Context Packer
+
+Pack files, a folder, or a git diff into LLM-ready context — straight to your clipboard. No more manually opening files one by one to paste into a chat window.
+
+## Commands
+
+- **ctxpack: Pack Selected Files/Folders for LLM Context** — right-click one or more files/folders in the Explorer
+- **ctxpack: Pack Entire Workspace for LLM Context** — packs everything (respecting `.gitignore`)
+- **ctxpack: Pack Git Diff for LLM Context** — prompts for a git ref (e.g. `main`), packs only what changed since then
+
+All available from the Command Palette (`Cmd/Ctrl+Shift+P`) or the Explorer right-click menu.
+
+## Features
+
+- **Secret redaction by default** — API keys, private key blocks, and env-style credentials are redacted before anything touches your clipboard. Turn off with `ctxpack.redactSecrets: false`.
+- **Token budget** — set `ctxpack.tokenBudget` to cap output size; keeps the most recently modified files and tells you what got dropped.
+- **Respects `.gitignore`** — plus sensible defaults (`node_modules`, lockfiles, binaries, build output).
+
+## Settings
+
+| Setting | Default | Description |
+|---|---|---|
+| `ctxpack.tokenBudget` | `0` (no limit) | Cap total output tokens |
+| `ctxpack.redactSecrets` | `true` | Redact likely secrets before copying |
+
+## Also available as a CLI
+
+Same engine, for the terminal: [`llm-ctxpack`](https://www.npmjs.com/package/llm-ctxpack) — `npx llm-ctxpack --help`
+
+## Support
+
+Free, MIT-licensed, no paid tier. If it saves you time: `0xc4e8021CdFf1a11946Ed16bd264f77D6B3C0C0e9` (any EVM chain — Ethereum, Base, Arbitrum, Optimism, Polygon, BNB).

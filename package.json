@@ -1,0 +1,82 @@
+{
+  "name": "ctxpack",
+  "displayName": "ctxpack: LLM Context Packer",
+  "description": "Pack selected files, a folder, or a git diff into LLM-ready context — token-budget-aware, model-aware, and redacts secrets by default. Copies straight to your clipboard.",
+  "version": "1.0.0",
+  "publisher": "dacode-dev",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Machine Learning"
+  ],
+  "keywords": [
+    "llm",
+    "ai",
+    "context",
+    "claude",
+    "chatgpt",
+    "copilot",
+    "cursor",
+    "prompt",
+    "token"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dacode-dev/vscode-ctxpack"
+  },
+  "license": "MIT",
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "ctxpack.packSelection",
+        "title": "ctxpack: Pack Selected Files/Folders for LLM Context"
+      },
+      {
+        "command": "ctxpack.packWorkspace",
+        "title": "ctxpack: Pack Entire Workspace for LLM Context"
+      },
+      {
+        "command": "ctxpack.packGitDiff",
+        "title": "ctxpack: Pack Git Diff for LLM Context"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "ctxpack.packSelection",
+          "group": "6_copypath"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "ctxpack",
+      "properties": {
+        "ctxpack.tokenBudget": {
+          "type": "number",
+          "default": 0,
+          "description": "Max tokens to include (0 = no limit). Keeps most recently modified files when over budget."
+        },
+        "ctxpack.redactSecrets": {
+          "type": "boolean",
+          "default": true,
+          "description": "Redact likely API keys/secrets before copying to clipboard."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "build": "esbuild src/extension.js --bundle --platform=node --external:vscode --outfile=dist/extension.js --format=cjs",
+    "package": "npm run build && vsce package"
+  },
+  "dependencies": {
+    "llm-ctxpack": "^0.2.1"
+  },
+  "devDependencies": {
+    "@vscode/vsce": "^3.9.2",
+    "esbuild": "^0.28.1"
+  }
+}
