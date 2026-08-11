@@ -33,4 +33,4 @@ Same engine, for the terminal: [`llm-ctxpack`](https://www.npmjs.com/package/llm
 
 ## Support
 
-Free, MIT-licensed, no paid tier. If it saves you time: [dacode-dev.github.io](https://dacode-dev.github.io/) (QR code + address) — or directly `0xc4e8021CdFf1a11946Ed16bd264f77D6B3C0C0e9` (any EVM chain — Ethereum, Base, Arbitrum, Optimism, Polygon, BNB).
+Free, MIT-licensed, no paid tier. If it saves you time: [dacode-dev.github.io](https://dacode-dev.github.io/) (QR code + address). Claude Code users can use the same page to unlock the private Power Pack Pro bonus commands/agents after a crypto tip; fulfillment is automated through a transaction-hash claim.
