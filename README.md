@@ -10,6 +10,10 @@ Pack files, a folder, or a git diff into LLM-ready context — straight to your 
 
 All available from the Command Palette (`Cmd/Ctrl+Shift+P`) or the Explorer right-click menu.
 
+## Install
+
+Download the public [v1.0.0 VSIX release](https://github.com/dacode-dev/vscode-ctxpack/releases/tag/v1.0.0), then in VS Code open Extensions → `...` → **Install from VSIX**. Marketplace publication is separate; the release artifact is available now without a publisher account.
+
 ## Features
 
 - **Secret redaction by default** — API keys, private key blocks, and env-style credentials are redacted before anything touches your clipboard. Turn off with `ctxpack.redactSecrets: false`.
