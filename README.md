@@ -12,11 +12,11 @@ All available from the Command Palette (`Cmd/Ctrl+Shift+P`) or the Explorer righ
 
 ## Install
 
-Download the public [v1.0.0 VSIX release](https://github.com/dacode-dev/vscode-ctxpack/releases/tag/v1.0.0), then in VS Code open Extensions → `...` → **Install from VSIX**. Marketplace publication is separate; the release artifact is available now without a publisher account.
+Download the [v1.1.0 VSIX release](https://github.com/dacode-dev/vscode-ctxpack/releases/tag/v1.1.0), then in VS Code open Extensions → `...` → **Install from VSIX**. Marketplace publication is separate; the release artifact is available now without a publisher account.
 
 ## Features
 
-- **Secret redaction by default** — API keys, private key blocks, and env-style credentials are redacted before anything touches your clipboard. Turn off with `ctxpack.redactSecrets: false`.
+- **Secret redaction by default** — API keys, private key blocks, env-style credentials, GitLab/npm/HuggingFace/Vercel/Linear/SendGrid/Twilio tokens, OpenAI `sk-proj-` keys, and passwords embedded in database connection URLs (`postgres://user:[REDACTED]@host`) are redacted before anything touches your clipboard. Turn off with `ctxpack.redactSecrets: false`.
 - **Token budget** — set `ctxpack.tokenBudget` to cap output size; keeps the most recently modified files and tells you what got dropped.
 - **Respects `.gitignore`** — plus sensible defaults (`node_modules`, lockfiles, binaries, build output).
 
