@@ -36,7 +36,7 @@ async function finish(entries, dropped, redactedCount, root, meta = {}) {
 
 async function packFiles(root, relFiles) {
   const { budget, redact } = getConfig();
-  const { entries, redactedCount } = buildFileEntries(root, relFiles, { redact });
+  let { entries, redactedCount } = buildFileEntries(root, relFiles, { redact });
   let selected = entries;
   let dropped = [];
   if (budget) {
