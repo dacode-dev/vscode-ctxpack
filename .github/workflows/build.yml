@@ -1,0 +1,19 @@
+name: build-and-smoke
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # Engine dependency is a pinned GitHub tarball; this host class allows git fetches.
+      - run: npm install --allow-git=all
+      - run: npm run build
+      - run: node test/smoke.js
