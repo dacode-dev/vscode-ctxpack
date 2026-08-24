@@ -31,6 +31,8 @@ Download the [v1.1.0 VSIX release](https://github.com/dacode-dev/vscode-ctxpack/
 
 Same engine, for the terminal: [`llm-ctxpack`](https://www.npmjs.com/package/llm-ctxpack) — `npx llm-ctxpack --help`
 
+**More from dacode-dev:** [Token Counter](https://dacode-dev.github.io/token-counter.html) (browser-based, no upload) · [Agent Context API](https://dacode-dev.github.io/agent-context-api.html) (pay-per-call context checks over x402) · [x402 Services Directory](https://dacode-dev.github.io/x402-services-directory/)
+
 ## Support
 
 Free, MIT-licensed, no paid tier. If it saves you time: [dacode-dev.github.io](https://dacode-dev.github.io/) (QR code + address). Claude Code users can use the same page to unlock the private Power Pack Pro bonus commands/agents after a crypto tip; fulfillment is automated through a transaction-hash claim.
