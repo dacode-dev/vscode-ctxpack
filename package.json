@@ -2,7 +2,7 @@
   "name": "ctxpack",
   "displayName": "ctxpack: LLM Context Packer",
   "description": "Pack selected files, a folder, or a git diff into LLM-ready context \u2014 token-budget-aware, model-aware, and redacts secrets by default. Copies straight to your clipboard.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "dacode-dev",
   "engines": {
     "vscode": "^1.85.0"
@@ -73,7 +73,7 @@
     "package": "npm run build && vsce package"
   },
   "dependencies": {
-    "llm-ctxpack": "github:dacode-dev/llm-ctxpack#v0.5.2"
+    "llm-ctxpack": "github:dacode-dev/llm-ctxpack#v0.5.3"
   },
   "devDependencies": {
     "@vscode/vsce": "^3.9.2",
